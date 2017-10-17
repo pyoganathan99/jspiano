@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Piano</title>
+    </head>
+    <body onkeydown="playmusic(event);">
+    </body>
+    <script>
+        var a=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/a1.wav");
+        var b=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/b1.wav");
+        var c=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/c1.wav");
+        var d=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/d1.wav");
+        var e=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/e1.wav");
+        var f=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/f1.wav");
+        var g=new Audio("https://raw.githubusercontent.com/pffy/wav-piano-sound/master/wav/g1.wav");
+        
+        var kick=new Audio("http://freewavesamples.com/files/Bass-Drum-3.wav");
+        var snare=new Audio("http://freewavesamples.com/files/Ensoniq-ESQ-1-Snare.wav");
+        var clap=new Audio("http://freewavesamples.com/files/Clap-1.wav");
+
+        function playmusic(event){
+            console.log(event.key);
+            switch(event.key){
+                case 'a': c.pause(); c.currentTime = 0; c.play(); break;
+                case 's': d.pause(); d.currentTime = 0; d.play(); break;
+                case 'd': e.pause(); e.currentTime = 0; e.play(); break;
+                case 'f': f.pause(); f.currentTime = 0; f.play(); break;
+                case 'g': g.pause(); g.currentTime = 0; g.play(); break;
+                case 'h': a.pause(); a.currentTime = 0; a.play(); break;
+                case 'j': b.pause(); b.currentTime = 0; b.play(); break;
+                case 'Enter': kick.pause(); kick.currentTime = 0; kick.play(); break;
+                case '0': snare.pause(); snare.currentTime = 0; snare.play(); break;
+                case '+': clap.pause(); clap.currentTime = 0; clap.play(); break;
+            }
+        }
+    </script>
+</html>
